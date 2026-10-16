@@ -107,8 +107,8 @@ Jede Woche eine Session. Ablauf:
 - Branch-Name: `<typ>/<kurze-beschreibung>`, z. B. `feat/kw44-about-skills`, `fix/mobile-nav-overflow`.
 - Branch frisch von aktuellem `main` abzweigen: `git checkout main && git pull && git checkout -b <branch>`.
 - **Ausnahme – vorheriges Update noch nicht gemergt:** Gibt es einen offenen Pull Request eines früheren Updates, den neuen Branch vom neusten offenen Update-Branch abzweigen (gestapelt), damit nichts verloren geht. Im neuen PR erwähnen, auf welchem PR er aufbaut.
-- Branch pushen (`git push -u origin <branch>`) und einen **Pull Request nach `main`** eröffnen (`gh pr create --base main --head <branch>`). Titel = Hauptänderung, Beschreibung: was, warum, Konzepte zum Lernen, Testergebnis, offene TODOs.
-- Klappt `gh pr create` nicht: in der Zusammenfassung den Link `https://github.com/martd13/portfolio-page/pull/new/<branch>` angeben.
+- Branch pushen (`git push -u origin <branch>`) und einen **Pull Request nach `main`** eröffnen per `gh api repos/martd13/portfolio-page/pulls -X POST -f base=main -f head=<branch> -f title="..." -f body="..."` (REST-API; `gh pr create` nutzt GraphQL und ist in Claude-Sessions blockiert). Titel = Hauptänderung, Beschreibung: was, warum, Konzepte zum Lernen, Testergebnis, offene TODOs.
+- Klappt das nicht: in der Zusammenfassung den Link `https://github.com/martd13/portfolio-page/pull/new/<branch>` angeben.
 - Nur einen PR eröffnen, wenn die Checkliste erfüllt ist. Ist etwas kaputt: Branch pushen, aber im PR-Titel `[WIP]` und das Problem beschreiben.
 - Dario mergt auf GitHub mit **«Create a merge commit»** (nicht Squash), damit die einzelnen Commits in der History bleiben.
 

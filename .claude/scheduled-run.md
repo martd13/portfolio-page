@@ -37,7 +37,7 @@ Es gibt keine Person, die Rückfragen beantworten kann.
 - Projekte aus dem Arbeitsumfeld erst veröffentlichen, wenn Dario sie in CLAUDE.md oder CHANGELOG.md freigegeben hat.
 - Keine grossen Rewrites, nichts pushen, was die Live-Seite kaputt macht. Lieber Etappe aufteilen.
 - Commit-Daten nie manipulieren.
-- **Nie direkt auf `main` committen und nie mergen.** Branch pushen, Pull Request nach `main` eröffnen (`gh pr create`); klappt das nicht, Link `https://github.com/martd13/portfolio-page/pull/new/<branch>` melden. Dario mergt selbst.
+- **Nie direkt auf `main` committen und nie mergen.** Branch pushen, Pull Request nach `main` eröffnen per `gh api repos/martd13/portfolio-page/pulls -X POST -f base=main -f head=<branch> -f title="..." -f body="..."` (REST-API; `gh pr create` nutzt GraphQL und ist in Claude-Sessions blockiert); klappt das nicht, Link `https://github.com/martd13/portfolio-page/pull/new/<branch>` melden. Dario mergt selbst.
 - Ist etwas kaputt: PR-Titel mit `[WIP]` und Problem beschreiben.
 
 ## Abschluss
