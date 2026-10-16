@@ -28,7 +28,7 @@ Es gibt keine Person, die Rückfragen beantworten kann.
 ## Schritt 1 – Wochen-Update
 
 1. `CLAUDE.md` lesen – verbindlich.
-2. `.claude/commands/weekly.md` ausführen: CHANGELOG.md lesen (fehlt sie: anlegen, Start Roadmap KW 43), nächsten offenen Roadmap-Punkt umsetzen, 1–3 saubere Commits.
+2. `.claude/commands/weekly.md` ausführen: CHANGELOG.md lesen (fehlt sie: anlegen, Start Roadmap KW 43), eigenen Branch anlegen, nächsten offenen Roadmap-Punkt umsetzen, 1–3 saubere Commits auf dem Branch.
 3. Wurde in dieser ISO-Woche schon ein Wochen-Update gepusht (CHANGELOG/Commits), nichts tun ausser Schritt 0.
 
 ## Regeln für den unbeaufsichtigten Lauf
@@ -37,7 +37,8 @@ Es gibt keine Person, die Rückfragen beantworten kann.
 - Projekte aus dem Arbeitsumfeld erst veröffentlichen, wenn Dario sie in CLAUDE.md oder CHANGELOG.md freigegeben hat.
 - Keine grossen Rewrites, nichts pushen, was die Live-Seite kaputt macht. Lieber Etappe aufteilen.
 - Commit-Daten nie manipulieren.
-- Vor dem Push `git fetch origin main` + rebase, dann auf `main` pushen. Danach Pages-Build prüfen, falls möglich (`gh api repos/martd13/portfolio-page/pages/builds/latest`).
+- **Nie direkt auf `main` committen.** Branch pushen, dann `git checkout main && git pull && git merge --no-ff <branch>` (Message `merge: <branch>`) und `main` pushen. Nur mergen, wenn die Checkliste erfüllt ist; sonst Branch ungemergt lassen und melden.
+- Danach Pages-Build prüfen, falls möglich (`gh run list -R martd13/portfolio-page --limit 3`).
 
 ## Abschluss
 
