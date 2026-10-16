@@ -3,12 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio von Dario Martig – ICT Trainee mit Fokus auf Cybersecurity, Automatisierung und digitale Transformation. Studium Digital Business & AI an der BFH.">
     <title>Dario Martig – Portfolio</title>
+
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
-    <h1>Hallo, ich bin Dario</h1>
-    <p>Meine Portfolio-Seite entsteht hier.</p>
+    <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="site-header__brand" href="#top" aria-label="Dario Martig – zum Seitenanfang">
+                <span class="site-header__logo" aria-hidden="true">DM</span>
+                <span class="site-header__name">Dario Martig</span>
+            </a>
+
+            <nav class="site-nav" aria-label="Hauptnavigation">
+                <ul class="site-nav__list" role="list">
+                    <li><a class="site-nav__link" href="#about">Über mich</a></li>
+                    <li><a class="site-nav__link" href="#skills">Skills</a></li>
+                    <li><a class="site-nav__link" href="#projects">Projekte</a></li>
+                    <li><a class="site-nav__link" href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero" id="top" aria-labelledby="hero-title">
+            <div class="container hero__inner">
+                <p class="hero__eyebrow">ICT Trainee · Studium Digital Business &amp; AI</p>
+                <h1 class="hero__title" id="hero-title">
+                    Hallo, ich bin Dario.
+                    <span class="hero__title-accent">Ich automatisiere Abläufe und mache Systeme sicherer.</span>
+                </h1>
+                <p class="hero__lead">
+                    Ich arbeite als ICT Trainee in einer Schweizer Anwaltskanzlei und studiere
+                    Digital Business &amp; AI an der Berner Fachhochschule. Mein Hintergrund ist
+                    die Elektronik, mein Fokus heute: Cybersecurity, Automatisierung und digitale
+                    Transformation.
+                </p>
+                <ul class="hero__tags" role="list" aria-label="Schwerpunkte">
+                    <li class="tag">Cybersecurity</li>
+                    <li class="tag">Power Automate</li>
+                    <li class="tag">Copilot Studio</li>
+                    <li class="tag">Digitale Transformation</li>
+                </ul>
+                <div class="hero__actions">
+                    <a class="button button--primary" href="#projects">Projekte ansehen</a>
+                    <a class="button button--secondary" href="#contact">Kontakt aufnehmen</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="about" aria-labelledby="about-title">
+            <div class="container">
+                <p class="section__label">01</p>
+                <h2 class="section__title" id="about-title">Über mich</h2>
+                <!-- TODO: Text «Über mich» von Dario (Werdegang, Motivation, was ihn antreibt) -->
+                <p class="section__placeholder">Dieser Bereich entsteht gerade.</p>
+            </div>
+        </section>
+
+        <section class="section section--alt" id="skills" aria-labelledby="skills-title">
+            <div class="container">
+                <p class="section__label">02</p>
+                <h2 class="section__title" id="skills-title">Skills</h2>
+                <!-- TODO: Skill-Liste von Dario (Technologien + Einschätzung) -->
+                <p class="section__placeholder">Dieser Bereich entsteht gerade.</p>
+            </div>
+        </section>
+
+        <section class="section" id="projects" aria-labelledby="projects-title">
+            <div class="container">
+                <p class="section__label">03</p>
+                <h2 class="section__title" id="projects-title">Projekte</h2>
+                <!-- TODO: Projekte werden in KW 45 dynamisch aus data/projects.json geladen -->
+                <p class="section__placeholder">Dieser Bereich entsteht gerade.</p>
+            </div>
+        </section>
+
+        <section class="section section--alt" id="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <p class="section__label">04</p>
+                <h2 class="section__title" id="contact-title">Kontakt</h2>
+                <!-- TODO: Kontaktwege von Dario (E-Mail, LinkedIn, GitHub) -->
+                <p class="section__placeholder">Dieser Bereich entsteht gerade.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container site-footer__inner">
+            <p>&copy; <span data-current-year>2026</span> Dario Martig</p>
+            <p>Gebaut mit HTML, CSS und JavaScript · BFH Web Engineering</p>
+        </div>
+    </footer>
 
     <script type="module" src="js/main.js"></script>
 </body>

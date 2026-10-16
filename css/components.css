@@ -1,0 +1,111 @@
+/* ==========================================================================
+   components.css – Navigation, Hero-Elemente, Buttons, Tags
+   ========================================================================== */
+
+/* ---------- Navigation ---------- */
+.site-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2xs) var(--space-md);
+}
+
+.site-nav__link {
+    display: inline-block;
+    padding-block: var(--space-2xs);
+    color: var(--color-text-muted);
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.site-nav__link:hover {
+    color: var(--color-text);
+    border-bottom-color: var(--color-accent);
+}
+
+/* ---------- Hero-Elemente ---------- */
+.hero__eyebrow {
+    font-family: var(--font-mono);
+    font-size: var(--fs-sm);
+    color: var(--color-accent);
+}
+
+.hero__title {
+    font-size: var(--fs-xl);
+    max-width: 18ch;
+}
+
+.hero__title-accent {
+    display: block;
+    margin-top: var(--space-xs);
+    font-size: 0.5em;
+    font-weight: 400;
+    color: var(--color-text-muted);
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+    max-width: 28ch;
+}
+
+.hero__lead {
+    font-size: var(--fs-md);
+    color: var(--color-text-muted);
+}
+
+.hero__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+}
+
+.hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+/* ---------- Tags ---------- */
+.tag {
+    padding: var(--space-2xs) var(--space-sm);
+    border-radius: 999px;
+    background-color: var(--color-accent-soft);
+    color: var(--color-accent-hover);
+    font-family: var(--font-mono);
+    font-size: var(--fs-sm);
+}
+
+/* ---------- Buttons ---------- */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: var(--space-xs) var(--space-lg);
+    border: 2px solid var(--color-accent);
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.button--primary {
+    background-color: var(--color-accent);
+    color: var(--color-surface);
+}
+
+.button--primary:hover {
+    background-color: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+    color: var(--color-surface);
+}
+
+.button--secondary {
+    background-color: transparent;
+    color: var(--color-accent);
+}
+
+.button--secondary:hover {
+    background-color: var(--color-accent-soft);
+    color: var(--color-accent-hover);
+}
