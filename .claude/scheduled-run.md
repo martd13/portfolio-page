@@ -28,8 +28,8 @@ Es gibt keine Person, die Rückfragen beantworten kann.
 ## Schritt 1 – Wochen-Update
 
 1. `CLAUDE.md` lesen – verbindlich.
-2. `.claude/commands/weekly.md` ausführen: CHANGELOG.md lesen (fehlt sie: anlegen, Start Roadmap KW 43), eigenen Branch anlegen, nächsten offenen Roadmap-Punkt umsetzen, 1–3 saubere Commits auf dem Branch.
-3. Wurde in dieser ISO-Woche schon ein Wochen-Update gepusht (CHANGELOG/Commits), nichts tun ausser Schritt 0.
+2. `.claude/commands/weekly.md` ausführen: CHANGELOG.md lesen (fehlt sie: anlegen, Start Roadmap KW 43), eigenen Branch anlegen (bei offenem Update-PR: vom neusten offenen Update-Branch), nächsten offenen Roadmap-Punkt umsetzen, 1–3 saubere Commits auf dem Branch, Pull Request eröffnen.
+3. Wurde in dieser ISO-Woche schon ein Wochen-Update gepusht (Branch/PR/CHANGELOG), nichts tun ausser Schritt 0.
 
 ## Regeln für den unbeaufsichtigten Lauf
 
@@ -37,9 +37,9 @@ Es gibt keine Person, die Rückfragen beantworten kann.
 - Projekte aus dem Arbeitsumfeld erst veröffentlichen, wenn Dario sie in CLAUDE.md oder CHANGELOG.md freigegeben hat.
 - Keine grossen Rewrites, nichts pushen, was die Live-Seite kaputt macht. Lieber Etappe aufteilen.
 - Commit-Daten nie manipulieren.
-- **Nie direkt auf `main` committen.** Branch pushen, dann `git checkout main && git pull && git merge --no-ff <branch>` (Message `merge: <branch>`) und `main` pushen. Nur mergen, wenn die Checkliste erfüllt ist; sonst Branch ungemergt lassen und melden.
-- Danach Pages-Build prüfen, falls möglich (`gh run list -R martd13/portfolio-page --limit 3`).
+- **Nie direkt auf `main` committen und nie mergen.** Branch pushen, Pull Request nach `main` eröffnen (`gh pr create`); klappt das nicht, Link `https://github.com/martd13/portfolio-page/pull/new/<branch>` melden. Dario mergt selbst.
+- Ist etwas kaputt: PR-Titel mit `[WIP]` und Problem beschreiben.
 
 ## Abschluss
 
-Kurze Zusammenfassung auf Deutsch: Commits, Konzepte für die Prüfung, offene TODOs von Dario, Zeitpunkt des nächsten Laufs.
+Kurze Zusammenfassung auf Deutsch: Branch, Link zum Pull Request, Commits, Konzepte für die Prüfung, offene TODOs von Dario, Zeitpunkt des nächsten Laufs.

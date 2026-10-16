@@ -12,7 +12,7 @@
 
 | Kriterium | Punkte | Was das für jeden Commit heisst |
 |---|---|---|
-| Erreichbarkeit | K.-o. | Seite muss nach jedem Push auf GitHub Pages funktionieren. Nie einen kaputten Stand pushen. |
+| Erreichbarkeit | K.-o. | `main` muss jederzeit auf GitHub Pages funktionieren. Nie einen kaputten Stand zum Merge vorschlagen. |
 | Responsivität | 15 | Mobile-first. Kein abgeschnittener Inhalt, keine horizontale Scrollleiste bei 360 px, 768 px, 1024 px, 1920 px. |
 | Codequalität & Komplexität | 20 | Saubere Trennung HTML/CSS/JS, modular, dynamische Inhalte, API-Calls, Caching, Pagination, Third-Party-Lib (Chart.js oder D3.js). |
 | Commit-History | 10 | Regelmässig über die ganze Projektdauer, prägnante Messages, die die Änderung beschreiben. |
@@ -95,21 +95,22 @@ Jede Woche eine Session. Ablauf:
 
 1. `git checkout main && git pull` und `CHANGELOG.md` lesen → wo stehen wir?
 2. Nächsten offenen Punkt aus der **Roadmap** unten nehmen.
-3. **Neuen Branch anlegen** (siehe Branching), bevor irgendetwas geändert wird.
+3. **Neuen Branch anlegen** (siehe Branching & Freigabe), bevor irgendetwas geändert wird.
 4. Umsetzen, in **1–3 kleinen, thematisch sauberen Commits** (nicht alles in einen).
 5. Selbst prüfen (siehe Checkliste).
 6. `CHANGELOG.md` ergänzen (Datum, was, warum) – ebenfalls auf dem Branch.
-7. Branch pushen, dann in `main` mergen und `main` pushen (siehe Branching). Danach kurz prüfen, ob der GitHub-Pages-Build durchläuft.
+7. Branch pushen und Pull Request nach `main` eröffnen (siehe Branching & Freigabe). **Nicht selbst mergen.** Die Seite wird erst live, wenn Dario den PR mergt.
 8. Am Ende mir eine kurze Zusammenfassung geben: **was geändert wurde, welches Konzept dahintersteckt** (z. B. «Event Delegation», «Cache mit TTL»), und was ich selbst verstehen sollte. Ich muss den Code an der Prüfung ohne Hilfsmittel erklären können.
 
-### Branching
-- **Nie direkt auf `main` committen.** Jede Änderung, auch kleine Fixes und Doku, läuft über einen eigenen Branch.
-- Branch-Name: `<typ>/<kurze-beschreibung>`, z. B. `feat/kw44-about-skills`, `fix/mobile-nav-overflow`, `docs/update-readme`.
-- Branch immer frisch von aktuellem `main` abzweigen: `git checkout main && git pull && git checkout -b <branch>`.
-- Branch pushen (`git push -u origin <branch>`), damit er auf GitHub sichtbar ist.
-- Danach in `main` mergen, **mit Merge-Commit** (`git checkout main && git pull && git merge --no-ff <branch>`), Merge-Message: `merge: <branch>`. Dann `main` pushen – erst dadurch deployt GitHub Pages.
-- Merge nur, wenn die Checkliste erfüllt ist. Ist etwas kaputt: Branch nicht mergen, Problem in der Zusammenfassung melden.
-- Gemergte Branches auf GitHub stehen lassen (zeigen den Fortschritt).
+### Branching & Freigabe
+- **Nie direkt auf `main` committen und nie selbst in `main` mergen.** Dario gibt jede Änderung selbst frei.
+- Branch-Name: `<typ>/<kurze-beschreibung>`, z. B. `feat/kw44-about-skills`, `fix/mobile-nav-overflow`.
+- Branch frisch von aktuellem `main` abzweigen: `git checkout main && git pull && git checkout -b <branch>`.
+- **Ausnahme – vorheriges Update noch nicht gemergt:** Gibt es einen offenen Pull Request eines früheren Updates, den neuen Branch vom neusten offenen Update-Branch abzweigen (gestapelt), damit nichts verloren geht. Im neuen PR erwähnen, auf welchem PR er aufbaut.
+- Branch pushen (`git push -u origin <branch>`) und einen **Pull Request nach `main`** eröffnen (`gh pr create --base main --head <branch>`). Titel = Hauptänderung, Beschreibung: was, warum, Konzepte zum Lernen, Testergebnis, offene TODOs.
+- Klappt `gh pr create` nicht: in der Zusammenfassung den Link `https://github.com/martd13/portfolio-page/pull/new/<branch>` angeben.
+- Nur einen PR eröffnen, wenn die Checkliste erfüllt ist. Ist etwas kaputt: Branch pushen, aber im PR-Titel `[WIP]` und das Problem beschreiben.
+- Dario mergt auf GitHub mit **«Create a merge commit»** (nicht Squash), damit die einzelnen Commits in der History bleiben.
 
 ### Commit-Konventionen
 - Format: `<typ>: <kurze Beschreibung im Imperativ>` (Englisch), max. ~60 Zeichen.
