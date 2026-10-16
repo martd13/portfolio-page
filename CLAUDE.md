@@ -6,7 +6,7 @@
 - **Live:** https://martd13.github.io/portfolio-page/ (GitHub Pages, Deploy from branch `main`, root `/`)
 - **Zweck:** Kompetenznachweis (60 % der Modulnote) im Modul *Web Engineering* an der BFH. Die Seite ist meine öffentliche Visitenkarte: wer ich bin, realisierte Projekte, Erfahrung in Technologien.
 - **Owner:** Dario Martig – ICT Trainee bei einer Schweizer Anwaltskanzlei, Studium Digital Business & AI (BFH), Hintergrund als Elektroniker. Schwerpunkte: Cybersecurity, Automatisierung (Power Automate, Copilot Studio), digitale Transformation.
-- **Aktueller Stand:** Nur ein Platzhalter (`<h1>Hallo, ich bin Dario</h1>`). Alles wird ab hier schrittweise aufgebaut.
+- **Aktueller Stand:** Siehe `CHANGELOG.md` (KW 43 «Fundament» am 2026-10-16 umgesetzt).
 
 ## Bewertungskriterien (immer im Blick behalten)
 
@@ -93,13 +93,23 @@ Mögliche Projekte für `projects.json` (vor Veröffentlichung mit mir abstimmen
 
 Jede Woche eine Session. Ablauf:
 
-1. `git pull` und `CHANGELOG.md` lesen → wo stehen wir?
+1. `git checkout main && git pull` und `CHANGELOG.md` lesen → wo stehen wir?
 2. Nächsten offenen Punkt aus der **Roadmap** unten nehmen.
-3. Umsetzen, in **1–3 kleinen, thematisch sauberen Commits** (nicht alles in einen).
-4. Selbst prüfen (siehe Checkliste).
-5. `CHANGELOG.md` ergänzen (Datum, was, warum).
-6. Commit + Push auf `main`. Danach kurz prüfen, ob der GitHub-Pages-Build durchläuft.
-7. Am Ende mir eine kurze Zusammenfassung geben: **was geändert wurde, welches Konzept dahintersteckt** (z. B. «Event Delegation», «Cache mit TTL»), und was ich selbst verstehen sollte. Ich muss den Code an der Prüfung ohne Hilfsmittel erklären können.
+3. **Neuen Branch anlegen** (siehe Branching), bevor irgendetwas geändert wird.
+4. Umsetzen, in **1–3 kleinen, thematisch sauberen Commits** (nicht alles in einen).
+5. Selbst prüfen (siehe Checkliste).
+6. `CHANGELOG.md` ergänzen (Datum, was, warum) – ebenfalls auf dem Branch.
+7. Branch pushen, dann in `main` mergen und `main` pushen (siehe Branching). Danach kurz prüfen, ob der GitHub-Pages-Build durchläuft.
+8. Am Ende mir eine kurze Zusammenfassung geben: **was geändert wurde, welches Konzept dahintersteckt** (z. B. «Event Delegation», «Cache mit TTL»), und was ich selbst verstehen sollte. Ich muss den Code an der Prüfung ohne Hilfsmittel erklären können.
+
+### Branching
+- **Nie direkt auf `main` committen.** Jede Änderung, auch kleine Fixes und Doku, läuft über einen eigenen Branch.
+- Branch-Name: `<typ>/<kurze-beschreibung>`, z. B. `feat/kw44-about-skills`, `fix/mobile-nav-overflow`, `docs/update-readme`.
+- Branch immer frisch von aktuellem `main` abzweigen: `git checkout main && git pull && git checkout -b <branch>`.
+- Branch pushen (`git push -u origin <branch>`), damit er auf GitHub sichtbar ist.
+- Danach in `main` mergen, **mit Merge-Commit** (`git checkout main && git pull && git merge --no-ff <branch>`), Merge-Message: `merge: <branch>`. Dann `main` pushen – erst dadurch deployt GitHub Pages.
+- Merge nur, wenn die Checkliste erfüllt ist. Ist etwas kaputt: Branch nicht mergen, Problem in der Zusammenfassung melden.
+- Gemergte Branches auf GitHub stehen lassen (zeigen den Fortschritt).
 
 ### Commit-Konventionen
 - Format: `<typ>: <kurze Beschreibung im Imperativ>` (Englisch), max. ~60 Zeichen.
