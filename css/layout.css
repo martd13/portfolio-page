@@ -177,7 +177,8 @@
     }
 }
 
-@media (min-width: 1024px) {
+/* 4 Spalten erst ab 1280px: darunter wären die Cards zu schmal für lange Tags */
+@media (min-width: 1280px) {
     .skill-grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }

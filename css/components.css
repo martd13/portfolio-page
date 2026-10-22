@@ -73,6 +73,7 @@
     color: var(--color-accent-hover);
     font-family: var(--font-mono);
     font-size: var(--fs-sm);
+    white-space: nowrap; /* Pill nicht mitten im Begriff umbrechen */
 }
 
 /* ---------- Buttons ---------- */
