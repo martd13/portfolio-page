@@ -154,3 +154,31 @@
         align-items: start;
     }
 }
+
+/* ---------- Skills-Grid (mobile-first) ---------- */
+.skill-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-md);
+}
+
+.skill-grid > li {
+    display: flex; /* Cards in einer Zeile gleich hoch */
+}
+
+.skill-grid__note {
+    margin-top: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+    .skill-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-lg);
+    }
+}
+
+@media (min-width: 1024px) {
+    .skill-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}

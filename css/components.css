@@ -147,3 +147,25 @@
 .fact-card__value {
     margin: 0;
 }
+
+/* ---------- Skill-Gruppe (Card) ---------- */
+.skill-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg);
+}
+
+.skill-group__title {
+    font-size: var(--fs-md);
+}
+
+.skill-group__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+}
