@@ -134,3 +134,23 @@
         gap: var(--space-xl);
     }
 }
+
+/* ---------- Über mich (mobile-first) ---------- */
+.about {
+    display: grid;
+    gap: var(--space-xl);
+}
+
+.about__text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+    /* Text links, Kurzprofil rechts */
+    .about {
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+        align-items: start;
+    }
+}

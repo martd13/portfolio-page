@@ -109,3 +109,41 @@
     background-color: var(--color-accent-soft);
     color: var(--color-accent-hover);
 }
+
+/* ---------- Platzhalter für fehlenden Inhalt ---------- */
+.placeholder-note {
+    padding: var(--space-sm) var(--space-md);
+    border: 1px dashed var(--color-focus);
+    border-radius: var(--radius-md);
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: var(--fs-sm);
+}
+
+/* ---------- Fact-Card (Kurzprofil) ---------- */
+.fact-card {
+    padding: var(--space-lg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-surface);
+}
+
+.fact-card__title {
+    margin-bottom: var(--space-md);
+    font-size: var(--fs-md);
+}
+
+.fact-card__list {
+    display: grid;
+    gap: var(--space-md);
+}
+
+.fact-card__term {
+    font-family: var(--font-mono);
+    font-size: var(--fs-sm);
+    color: var(--color-accent);
+}
+
+.fact-card__value {
+    margin: 0;
+}
