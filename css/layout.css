@@ -134,3 +134,52 @@
         gap: var(--space-xl);
     }
 }
+
+/* ---------- Über mich (mobile-first) ---------- */
+.about {
+    display: grid;
+    gap: var(--space-xl);
+}
+
+.about__text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+    /* Text links, Kurzprofil rechts */
+    .about {
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+        align-items: start;
+    }
+}
+
+/* ---------- Skills-Grid (mobile-first) ---------- */
+.skill-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-md);
+}
+
+.skill-grid > li {
+    display: flex; /* Cards in einer Zeile gleich hoch */
+}
+
+.skill-grid__note {
+    margin-top: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+    .skill-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-lg);
+    }
+}
+
+/* 4 Spalten erst ab 1280px: darunter wären die Cards zu schmal für lange Tags */
+@media (min-width: 1280px) {
+    .skill-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}

@@ -68,8 +68,44 @@
             <div class="container">
                 <p class="section__label">01</p>
                 <h2 class="section__title" id="about-title">Über mich</h2>
-                <!-- TODO: Text «Über mich» von Dario (Werdegang, Motivation, was ihn antreibt) -->
-                <p class="section__placeholder">Dieser Bereich entsteht gerade.</p>
+                <div class="about">
+                    <div class="about__text">
+                        <p>
+                            Ich bin ICT Trainee in einer Schweizer Anwaltskanzlei und studiere
+                            Digital Business &amp; AI an der Berner Fachhochschule (BFH).
+                        </p>
+                        <p>
+                            Ursprünglich komme ich aus der Elektronik. Heute beschäftige ich mich vor
+                            allem mit Cybersecurity, mit der Automatisierung von Abläufen und mit der
+                            digitalen Transformation im Arbeitsalltag.
+                        </p>
+                        <p class="placeholder-note">
+                            TODO: Persönlicher Text von Dario – Werdegang, Motivation, was mich antreibt.
+                        </p>
+                    </div>
+
+                    <aside class="fact-card" aria-labelledby="facts-title">
+                        <h3 class="fact-card__title" id="facts-title">Kurzprofil</h3>
+                        <dl class="fact-card__list">
+                            <div class="fact-card__item">
+                                <dt class="fact-card__term">Aktuell</dt>
+                                <dd class="fact-card__value">ICT Trainee, Anwaltskanzlei (Schweiz)</dd>
+                            </div>
+                            <div class="fact-card__item">
+                                <dt class="fact-card__term">Studium</dt>
+                                <dd class="fact-card__value">Digital Business &amp; AI, BFH</dd>
+                            </div>
+                            <div class="fact-card__item">
+                                <dt class="fact-card__term">Hintergrund</dt>
+                                <dd class="fact-card__value">Elektroniker</dd>
+                            </div>
+                            <div class="fact-card__item">
+                                <dt class="fact-card__term">Schwerpunkte</dt>
+                                <dd class="fact-card__value">Cybersecurity, Automatisierung, digitale Transformation</dd>
+                            </div>
+                        </dl>
+                    </aside>
+                </div>
             </div>
         </section>
 
@@ -77,8 +113,49 @@
             <div class="container">
                 <p class="section__label">02</p>
                 <h2 class="section__title" id="skills-title">Skills</h2>
-                <!-- TODO: Skill-Liste von Dario (Technologien + Einschätzung) -->
-                <p class="section__placeholder">Dieser Bereich entsteht gerade.</p>
+                <ul class="skill-grid" role="list">
+                    <li>
+                        <article class="skill-group">
+                            <h3 class="skill-group__title">Automatisierung</h3>
+                            <ul class="skill-group__list" role="list">
+                                <li class="tag">Power Automate</li>
+                                <li class="tag">Office Scripts</li>
+                                <li class="tag">Copilot Studio</li>
+                            </ul>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="skill-group">
+                            <h3 class="skill-group__title">Cybersecurity</h3>
+                            <ul class="skill-group__list" role="list">
+                                <li class="tag">Security Awareness</li>
+                            </ul>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="skill-group">
+                            <h3 class="skill-group__title">Webentwicklung</h3>
+                            <ul class="skill-group__list" role="list">
+                                <li class="tag">HTML</li>
+                                <li class="tag">CSS</li>
+                                <li class="tag">JavaScript</li>
+                                <li class="tag">Vue 3</li>
+                                <li class="tag">Strapi</li>
+                            </ul>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="skill-group">
+                            <h3 class="skill-group__title">Hardware</h3>
+                            <ul class="skill-group__list" role="list">
+                                <li class="tag">Elektronik</li>
+                            </ul>
+                        </article>
+                    </li>
+                </ul>
+                <p class="placeholder-note skill-grid__note">
+                    TODO: Skill-Liste von Dario prüfen und ergänzen, inkl. Einschätzung pro Skill (für die Chart.js-Visualisierung in KW 48).
+                </p>
             </div>
         </section>
 
