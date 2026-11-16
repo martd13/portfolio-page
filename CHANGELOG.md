@@ -6,7 +6,9 @@ Wöchentliche Updates der Portfolio-Seite. Neueste Einträge oben.
 
 **Was**
 - Neue Section «Hobbys» (zwischen «Über mich» und «Skills»), Nav-Link ergänzt, Section-Nummern angepasst
-- Leichtathletik bei der LV Thun: kurzer Text, Disziplinen als Tags, Liste «Stationen & Resultate» mit Links auf die Originalberichte (LV Thun, Plattform J)
+- Leichtathletik bei der LV Thun: kurzer Text, Disziplinen als Tags, vier «Highlights» mit Rang (ohne Zeiten/Weiten) und Link auf den Originalbericht (LV Thun, Plattform J)
+- Weitere Hobbys: Klavier und Sport allgemein
+- Nach Rückmeldung von Dario abgespeckt: nur Ränge, keine konkreten Leistungen, weniger Einträge (öffentliche Seite)
 - Foto-Platzhalter statt Bild: Die Fotos in den Vereinsberichten gehören den Fotografen (z. B. «Bilder Fritz Berger») und dürfen nicht ohne Freigabe ins öffentliche Repo
 - Hintergrundwechsel der Sections (`section--alt`) neu verteilt
 
@@ -23,9 +25,7 @@ Playwright/Chromium bei 320, 360, 768, 1024, 1920 px: keine horizontale Scrollle
 - **Grid-Spalten pro Listeneintrag:** Mobil stapeln sich Jahr, Text und Link; ab 768 px ein Grid `4rem | 1fr | auto`.
 
 **Offene TODOs für Dario**
-- Bestätigen, dass alle verlinkten Resultate von dir sind
 - Eigenes Foto liefern (oder schriftliche Freigabe des Fotografen)
-- Persönlicher Satz zur Leichtathletik und weitere Hobbys
 
 ## 2026-10-22 – Roadmap KW 44: Layout & Responsive
 
