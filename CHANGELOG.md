@@ -2,6 +2,26 @@
 
 Wöchentliche Updates der Portfolio-Seite. Neueste Einträge oben.
 
+## 2026-11-16 – Kontakt-Section mit LinkedIn
+
+**Was**
+- Kontakt-Section ersetzt den Platzhalter: kurze Einleitung und eine Kontakt-Card für LinkedIn
+- LinkedIn-URL ist noch ein sichtbarer `TODO:`-Platzhalter
+- Bewusst nicht drin (Entscheid Dario, öffentliche Seite): GitHub, E-Mail, Lebenslauf
+
+**Warum**
+Die Seite soll auch für Bewerbungen taugen, ohne zu viel Persönliches öffentlich zu machen. LinkedIn ist der einzige Kontaktweg.
+
+**Getestet**
+Playwright/Chromium bei 320, 360, 768, 1024, 1920 px: keine horizontale Scrollleiste, ein `<h1>`, kein Inline-CSS, keine JS-Fehler. Tag-Struktur geprüft.
+
+**Konzepte für die Prüfung**
+- **`max-width` statt Grid:** Für eine einzelne Card braucht es kein Grid. `max-width` verhindert, dass sie auf breiten Screens über die ganze Breite gezogen wird.
+- **Datensparsamkeit:** Auf einer öffentlichen Seite nur veröffentlichen, was nötig ist. Adresse, Telefon, E-Mail und CV gehen gezielt an Firmen, nicht ins Netz.
+
+**Offene TODOs für Dario**
+- LinkedIn-URL
+
 ## 2026-11-16 – Hobbys: Leichtathletik
 
 **Was**

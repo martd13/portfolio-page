@@ -242,6 +242,26 @@
     gap: var(--space-xs);
 }
 
+/* ---------- Kontakt-Card ---------- */
+.contact-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: var(--space-lg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-surface);
+}
+
+.contact-card__title {
+    font-size: var(--fs-md);
+}
+
+.contact-card__text {
+    color: var(--color-text-muted);
+}
+
 /* Im Textblock sorgt bereits das Flex-gap für Abstand */
 .hobby__text .hobby__subtitle--spaced {
     margin-block: var(--space-sm) 0;

@@ -212,3 +212,17 @@
         align-items: start;
     }
 }
+
+/* ---------- Kontakt (mobile-first) ---------- */
+.contact {
+    display: grid;
+    gap: var(--space-lg);
+}
+
+.contact__lead {
+    max-width: 40rem;
+}
+
+.contact-card {
+    max-width: 28rem;
+}
