@@ -241,3 +241,34 @@
     flex-wrap: wrap;
     gap: var(--space-xs);
 }
+
+/* ---------- Kontakt-Card ---------- */
+.contact-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: var(--space-lg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-surface);
+}
+
+.contact-card__title {
+    font-size: var(--fs-md);
+}
+
+.contact-card__text {
+    color: var(--color-text-muted);
+}
+
+.contact-card__link {
+    margin-top: auto; /* Link immer am unteren Rand der Card */
+    color: var(--color-accent);
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}
+
+.contact-card__link:hover {
+    color: var(--color-accent-hover);
+}
