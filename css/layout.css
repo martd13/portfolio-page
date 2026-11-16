@@ -223,25 +223,6 @@
     max-width: 40rem;
 }
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: var(--space-md);
-}
-
-.contact-grid > li {
-    display: flex;
-}
-
-@media (min-width: 768px) {
-    .contact-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: var(--space-lg);
-    }
-}
-
-@media (min-width: 1280px) {
-    .contact-grid {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
+.contact-card {
+    max-width: 28rem;
 }

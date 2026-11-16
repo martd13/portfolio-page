@@ -262,16 +262,3 @@
     color: var(--color-text-muted);
 }
 
-.contact-card__link {
-    margin-top: auto; /* Link immer am unteren Rand der Card */
-    color: var(--color-accent);
-    font-weight: 500;
-    overflow-wrap: anywhere;
-}
-
-.contact-card__link:hover {
-    color: var(--color-accent-hover);
-/* Im Textblock sorgt bereits das Flex-gap für Abstand */
-.hobby__text .hobby__subtitle--spaced {
-    margin-block: var(--space-sm) 0;
-}
