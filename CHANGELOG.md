@@ -2,6 +2,29 @@
 
 Wöchentliche Updates der Portfolio-Seite. Neueste Einträge oben.
 
+## 2026-11-16 – Kontakt-Section mit LinkedIn, GitHub, E-Mail, CV
+
+**Was**
+- Kontakt-Section ersetzt den Platzhalter: Einleitung und vier Kontakt-Cards (LinkedIn, GitHub, E-Mail, Lebenslauf)
+- GitHub ist verlinkt (`github.com/martd13`), die anderen drei sind sichtbare `TODO:`-Platzhalter
+- Grid: 1 Spalte mobil, 2 ab 768 px, 4 ab 1280 px
+
+**Warum**
+Die Seite soll auch für Bewerbungen taugen. Dafür müssen LinkedIn, E-Mail und CV mit einem Klick erreichbar sein. URL, Adresse und PDF fehlen noch und werden nicht geraten.
+
+**Getestet**
+Playwright/Chromium bei 320, 360, 768, 1024, 1920 px: keine horizontale Scrollleiste, ein `<h1>`, kein Inline-CSS, keine JS-Fehler. Tag-Struktur geprüft (alle Elemente korrekt geschlossen).
+
+**Konzepte für die Prüfung**
+- **`margin-top: auto` in einer Flex-Column:** schiebt den Link an den unteren Rand der Card, auch wenn die Texte unterschiedlich lang sind.
+- **`overflow-wrap: anywhere`:** Lange URLs brechen um statt horizontal zu scrollen.
+- **Wiederverwendetes Grid-Muster:** gleiches Prinzip wie das Skills-Grid (`minmax(0, 1fr)`, `li` als Flex-Container für gleich hohe Cards).
+
+**Offene TODOs für Dario**
+- LinkedIn-URL
+- Öffentliche E-Mail-Adresse (die private nicht ungefragt veröffentlichen)
+- Lebenslauf als PDF
+
 ## 2026-11-16 – Hobbys: Leichtathletik
 
 **Was**
