@@ -183,3 +183,32 @@
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 }
+
+/* ---------- Hobbys (mobile-first) ---------- */
+.hobby {
+    display: grid;
+    gap: var(--space-xl);
+}
+
+.hobby__text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.hobby__media {
+    margin: 0;
+}
+
+.result-list {
+    display: grid;
+    gap: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+    /* Text links, Foto rechts */
+    .hobby {
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+        align-items: start;
+    }
+}
