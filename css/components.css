@@ -262,3 +262,7 @@
     color: var(--color-text-muted);
 }
 
+/* Im Textblock sorgt bereits das Flex-gap für Abstand */
+.hobby__text .hobby__subtitle--spaced {
+    margin-block: var(--space-sm) 0;
+}
