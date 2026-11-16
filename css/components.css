@@ -170,3 +170,79 @@
     flex-wrap: wrap;
     gap: var(--space-xs);
 }
+
+/* ---------- Hobbys: Foto-Platzhalter & Resultate ---------- */
+.hobby__subtitle {
+    font-size: var(--fs-md);
+}
+
+.hobby__subtitle--spaced {
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-md);
+}
+
+.hobby__photo-placeholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-xs);
+    aspect-ratio: 4 / 3;
+    padding: var(--space-lg);
+    border: 1px dashed var(--color-focus);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg);
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    font-size: var(--fs-sm);
+    overflow-wrap: anywhere;
+}
+
+.hobby__caption {
+    margin-top: var(--space-xs);
+    color: var(--color-text-muted);
+    font-size: var(--fs-sm);
+}
+
+.result-list__item {
+    display: grid;
+    gap: var(--space-2xs);
+    padding: var(--space-md);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-accent);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-surface);
+}
+
+.result-list__year {
+    font-family: var(--font-mono);
+    font-size: var(--fs-sm);
+    color: var(--color-accent);
+}
+
+.result-list__source {
+    font-size: var(--fs-sm);
+    color: var(--color-accent);
+}
+
+.result-list__source:hover {
+    color: var(--color-accent-hover);
+}
+
+@media (min-width: 768px) {
+    .result-list__item {
+        grid-template-columns: 4rem minmax(0, 1fr) auto;
+        align-items: baseline;
+        gap: var(--space-md);
+    }
+}
+
+.hobby__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+}
+
+/* Im Textblock sorgt bereits das Flex-gap für Abstand */
+.hobby__text .hobby__subtitle--spaced {
+    margin-block: var(--space-sm) 0;
+}

@@ -29,6 +29,7 @@
             <nav class="site-nav" aria-label="Hauptnavigation">
                 <ul class="site-nav__list" role="list">
                     <li><a class="site-nav__link" href="#about">Über mich</a></li>
+                    <li><a class="site-nav__link" href="#hobbys">Hobbys</a></li>
                     <li><a class="site-nav__link" href="#skills">Skills</a></li>
                     <li><a class="site-nav__link" href="#projects">Projekte</a></li>
                     <li><a class="site-nav__link" href="#contact">Kontakt</a></li>
@@ -109,9 +110,73 @@
             </div>
         </section>
 
-        <section class="section section--alt" id="skills" aria-labelledby="skills-title">
+        <section class="section section--alt" id="hobbys" aria-labelledby="hobbys-title">
             <div class="container">
                 <p class="section__label">02</p>
+                <h2 class="section__title" id="hobbys-title">Hobbys</h2>
+                <div class="hobby">
+                    <div class="hobby__text">
+                        <h3 class="hobby__subtitle">Leichtathletik bei der LV Thun</h3>
+                        <p>
+                            Im Nachwuchs der Leichtathletikvereinigung Thun (LV Thun) war ich vielseitig
+                            unterwegs: Sprint, Staffel, Diskus, Mehrkampf und vor allem Speerwurf.
+                        </p>
+                        <ul class="hobby__tags" role="list" aria-label="Disziplinen">
+                            <li class="tag">Speerwurf</li>
+                            <li class="tag">Diskus</li>
+                            <li class="tag">Sprint</li>
+                            <li class="tag">Staffel</li>
+                            <li class="tag">Mehrkampf</li>
+                        </ul>
+
+                        <h3 class="hobby__subtitle hobby__subtitle--spaced">Ausserdem</h3>
+                        <p>
+                            Ich spiele Klavier und bin auch sonst gerne sportlich unterwegs.
+                        </p>
+                        <ul class="hobby__tags" role="list" aria-label="Weitere Hobbys">
+                            <li class="tag">Klavier</li>
+                            <li class="tag">Sport</li>
+                        </ul>
+                    </div>
+
+                    <figure class="hobby__media">
+                        <div class="hobby__photo-placeholder">
+                            <p>TODO: Foto Leichtathletik</p>
+                            <p>Eigenes Bild in <code>assets/img/</code> ablegen. Fotos aus den Vereinsberichten erst nach Freigabe durch die Fotografen verwenden.</p>
+                        </div>
+                        <figcaption class="hobby__caption">Platz für ein Wettkampfbild</figcaption>
+                    </figure>
+                </div>
+
+                <h3 class="hobby__subtitle hobby__subtitle--spaced">Highlights</h3>
+                <ol class="result-list" role="list">
+                    <li class="result-list__item">
+                        <p class="result-list__year">2021</p>
+                        <p class="result-list__text">Schweizer Nachwuchs-Meisterschaften: 10. Rang im Speerwurf</p>
+                        <a class="result-list__source" href="https://www.lvthun.ch/de/News/Newsmeldung?newsid=186" target="_blank" rel="noopener">Bericht LV Thun</a>
+                    </li>
+                    <li class="result-list__item">
+                        <p class="result-list__year">2018</p>
+                        <p class="result-list__text">Internationales Abendmeeting Thun: 1. Rang im Speerwurf U18</p>
+                        <a class="result-list__source" href="https://www.plattformj.ch/artikel/165495/" target="_blank" rel="noopener">Artikel Plattform J</a>
+                    </li>
+                    <li class="result-list__item">
+                        <p class="result-list__year">2018</p>
+                        <p class="result-list__text">Kantonale Nachwuchs-Meisterschaften: 1. Rang mit der 4×100-m-Staffel U18 und eine Medaille im Speerwurf</p>
+                        <a class="result-list__source" href="https://www.lvthun.ch/de/News/Newsmeldung?newsid=87" target="_blank" rel="noopener">Bericht LV Thun</a>
+                    </li>
+                    <li class="result-list__item">
+                        <p class="result-list__year">2017</p>
+                        <p class="result-list__text">«Schnellster Thuner»: 2. Rang im Sprint</p>
+                        <a class="result-list__source" href="https://www.lvthun.ch/de/News/Newsmeldung?newsid=31" target="_blank" rel="noopener">Bericht LV Thun</a>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="section" id="skills" aria-labelledby="skills-title">
+            <div class="container">
+                <p class="section__label">03</p>
                 <h2 class="section__title" id="skills-title">Skills</h2>
                 <ul class="skill-grid" role="list">
                     <li>
@@ -159,18 +224,18 @@
             </div>
         </section>
 
-        <section class="section" id="projects" aria-labelledby="projects-title">
+        <section class="section section--alt" id="projects" aria-labelledby="projects-title">
             <div class="container">
-                <p class="section__label">03</p>
+                <p class="section__label">04</p>
                 <h2 class="section__title" id="projects-title">Projekte</h2>
                 <!-- TODO: Projekte werden in KW 45 dynamisch aus data/projects.json geladen -->
                 <p class="section__placeholder">Dieser Bereich entsteht gerade.</p>
             </div>
         </section>
 
-        <section class="section section--alt" id="contact" aria-labelledby="contact-title">
+        <section class="section" id="contact" aria-labelledby="contact-title">
             <div class="container">
-                <p class="section__label">04</p>
+                <p class="section__label">05</p>
                 <h2 class="section__title" id="contact-title">Kontakt</h2>
                 <!-- TODO: Kontaktwege von Dario (E-Mail, LinkedIn, GitHub) -->
                 <p class="section__placeholder">Dieser Bereich entsteht gerade.</p>
