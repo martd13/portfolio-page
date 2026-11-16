@@ -2,28 +2,25 @@
 
 Wöchentliche Updates der Portfolio-Seite. Neueste Einträge oben.
 
-## 2026-11-16 – Kontakt-Section mit LinkedIn, GitHub, E-Mail, CV
+## 2026-11-16 – Kontakt-Section mit LinkedIn
 
 **Was**
-- Kontakt-Section ersetzt den Platzhalter: Einleitung und vier Kontakt-Cards (LinkedIn, GitHub, E-Mail, Lebenslauf)
-- GitHub ist verlinkt (`github.com/martd13`), die anderen drei sind sichtbare `TODO:`-Platzhalter
-- Grid: 1 Spalte mobil, 2 ab 768 px, 4 ab 1280 px
+- Kontakt-Section ersetzt den Platzhalter: kurze Einleitung und eine Kontakt-Card für LinkedIn
+- LinkedIn-URL ist noch ein sichtbarer `TODO:`-Platzhalter
+- Bewusst nicht drin (Entscheid Dario, öffentliche Seite): GitHub, E-Mail, Lebenslauf
 
 **Warum**
-Die Seite soll auch für Bewerbungen taugen. Dafür müssen LinkedIn, E-Mail und CV mit einem Klick erreichbar sein. URL, Adresse und PDF fehlen noch und werden nicht geraten.
+Die Seite soll auch für Bewerbungen taugen, ohne zu viel Persönliches öffentlich zu machen. LinkedIn ist der einzige Kontaktweg.
 
 **Getestet**
-Playwright/Chromium bei 320, 360, 768, 1024, 1920 px: keine horizontale Scrollleiste, ein `<h1>`, kein Inline-CSS, keine JS-Fehler. Tag-Struktur geprüft (alle Elemente korrekt geschlossen).
+Playwright/Chromium bei 320, 360, 768, 1024, 1920 px: keine horizontale Scrollleiste, ein `<h1>`, kein Inline-CSS, keine JS-Fehler. Tag-Struktur geprüft.
 
 **Konzepte für die Prüfung**
-- **`margin-top: auto` in einer Flex-Column:** schiebt den Link an den unteren Rand der Card, auch wenn die Texte unterschiedlich lang sind.
-- **`overflow-wrap: anywhere`:** Lange URLs brechen um statt horizontal zu scrollen.
-- **Wiederverwendetes Grid-Muster:** gleiches Prinzip wie das Skills-Grid (`minmax(0, 1fr)`, `li` als Flex-Container für gleich hohe Cards).
+- **`max-width` statt Grid:** Für eine einzelne Card braucht es kein Grid. `max-width` verhindert, dass sie auf breiten Screens über die ganze Breite gezogen wird.
+- **Datensparsamkeit:** Auf einer öffentlichen Seite nur veröffentlichen, was nötig ist. Adresse, Telefon, E-Mail und CV gehen gezielt an Firmen, nicht ins Netz.
 
 **Offene TODOs für Dario**
 - LinkedIn-URL
-- Öffentliche E-Mail-Adresse (die private nicht ungefragt veröffentlichen)
-- Lebenslauf als PDF
 
 ## 2026-11-16 – Hobbys: Leichtathletik
 
