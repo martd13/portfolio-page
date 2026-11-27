@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
     <a class="skip-link" href="#main">Zum Inhalt springen</a>
@@ -41,27 +42,33 @@
     <main id="main">
         <section class="hero" id="top" aria-labelledby="hero-title">
             <div class="container hero__inner">
-                <p class="hero__eyebrow">ICT Trainee · Studium Digital Business &amp; AI</p>
-                <h1 class="hero__title" id="hero-title">
-                    Hallo, ich bin Dario.
-                    <span class="hero__title-accent">Ich automatisiere Abläufe und mache Systeme sicherer.</span>
-                </h1>
-                <p class="hero__lead">
-                    Ich arbeite als ICT Trainee in einer Schweizer Anwaltskanzlei und studiere
-                    Digital Business &amp; AI an der Berner Fachhochschule. Mein Hintergrund ist
-                    die Elektronik, mein Fokus heute: Cybersecurity, Automatisierung und digitale
-                    Transformation.
-                </p>
-                <ul class="hero__tags" role="list" aria-label="Schwerpunkte">
-                    <li class="tag">Cybersecurity</li>
-                    <li class="tag">Power Automate</li>
-                    <li class="tag">Copilot Studio</li>
-                    <li class="tag">Digitale Transformation</li>
-                </ul>
-                <div class="hero__actions">
-                    <a class="button button--primary" href="#projects">Projekte ansehen</a>
-                    <a class="button button--secondary" href="#contact">Kontakt aufnehmen</a>
+                <div class="hero__content">
+                    <p class="hero__eyebrow">ICT Trainee · Studium Digital Business &amp; AI</p>
+                    <h1 class="hero__title" id="hero-title">
+                        Hallo, ich bin Dario. <span class="hero__wave" aria-hidden="true">👋</span>
+                        <span class="hero__title-accent">Ich automatisiere Abläufe und mache Systeme sicherer.</span>
+                    </h1>
+                    <p class="hero__lead">
+                        Ich arbeite als ICT Trainee in einer Schweizer Anwaltskanzlei und studiere
+                        Digital Business &amp; AI an der Berner Fachhochschule. Mein Hintergrund ist
+                        die Elektronik, mein Fokus heute: Cybersecurity, Automatisierung und digitale
+                        Transformation.
+                    </p>
+                    <ul class="hero__tags" role="list" aria-label="Schwerpunkte">
+                        <li class="tag">Cybersecurity</li>
+                        <li class="tag">Power Automate</li>
+                        <li class="tag">Copilot Studio</li>
+                        <li class="tag">Digitale Transformation</li>
+                    </ul>
+                    <div class="hero__actions">
+                        <a class="button button--primary" href="#projects">Projekte ansehen</a>
+                        <a class="button button--secondary" href="#contact">Kontakt aufnehmen</a>
+                    </div>
                 </div>
+
+                <figure class="hero__visual">
+                    <img class="hero__image" src="assets/img/hero.svg" alt="Illustration: Laptop mit einem automatisierten Ablauf, daneben ein Sicherheits-Schild und drehende Zahnräder" width="520" height="440">
+                </figure>
             </div>
         </section>
 
@@ -140,11 +147,8 @@
                     </div>
 
                     <figure class="hobby__media">
-                        <div class="hobby__photo-placeholder">
-                            <p>TODO: Foto Leichtathletik</p>
-                            <p>Eigenes Bild in <code>assets/img/</code> ablegen. Fotos aus den Vereinsberichten erst nach Freigabe durch die Fotografen verwenden.</p>
-                        </div>
-                        <figcaption class="hobby__caption">Platz für ein Wettkampfbild</figcaption>
+                        <img class="hobby__image" src="assets/img/athletics.svg" alt="Illustration: Ein Speer fliegt im Bogen über die Leichtathletikbahn" width="480" height="360" loading="lazy">
+                        <figcaption class="hobby__caption">Speerwurf, meine Hauptdisziplin</figcaption>
                     </figure>
                 </div>
 
