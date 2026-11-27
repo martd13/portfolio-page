@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <style>
+    .cursor { animation: blink 1s steps(1) infinite; }
+    .grow { transform-origin: 150px 140px; animation: grow 3.5s ease-in-out infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    @keyframes grow { 0%,100% { transform: scaleX(.7); } 50% { transform: scaleX(1); } }
+    @media (prefers-reduced-motion: reduce) { .cursor, .grow { animation: none; } }
+  </style>
+  <rect width="480" height="300" fill="#e1efeb"/>
+  <!-- Browserfenster -->
+  <rect x="60" y="40" width="360" height="220" rx="12" fill="#fff" stroke="#1c1f24" stroke-width="4"/>
+  <path d="M60 76h360" stroke="#1c1f24" stroke-width="4"/>
+  <g fill="#e8a33d"><circle cx="82" cy="58" r="6"/><circle cx="102" cy="58" r="6" fill="#dcdad3"/><circle cx="122" cy="58" r="6" fill="#0f6e5c"/></g>
+  <rect x="146" y="50" width="200" height="16" rx="8" fill="#f6f5f1"/>
+  <!-- Seiteninhalt -->
+  <rect x="84" y="96" width="120" height="16" rx="4" fill="#1c1f24"/>
+  <rect class="grow" x="84" y="122" width="190" height="10" rx="5" fill="#dcdad3"/>
+  <g fill="#e1efeb" stroke="#0f6e5c" stroke-width="2">
+    <rect x="84" y="150" width="96" height="80" rx="8"/>
+    <rect x="192" y="150" width="96" height="80" rx="8"/>
+    <rect x="300" y="150" width="96" height="80" rx="8"/>
+  </g>
+  <!-- Code-Badge -->
+  <g transform="translate(330 92)">
+    <rect width="70" height="40" rx="8" fill="#0f6e5c"/>
+    <text x="35" y="26" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#fff">&lt;/&gt;</text>
+  </g>
+  <rect class="cursor" x="210" y="98" width="4" height="14" fill="#e8a33d"/>
+</svg>

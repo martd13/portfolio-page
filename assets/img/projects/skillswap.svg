@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <style>
+    .spin { transform-origin: 240px 150px; animation: spin 10s linear infinite; }
+    .ping { animation: ping 2s ease-in-out infinite; }
+    .ping.b { animation-delay: 1s; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes ping { 0%,100% { opacity: .35; } 50% { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { .spin, .ping { animation: none; } }
+  </style>
+  <rect width="480" height="300" fill="#1c1f24"/>
+  <g class="spin" fill="none" stroke="#e8a33d" stroke-width="5" stroke-linecap="round">
+    <path d="M180 120a70 70 0 0 1 120 0"/>
+    <path d="M300 180a70 70 0 0 1-120 0"/>
+    <path d="M290 104l10 16 16-8"/>
+    <path d="M190 196l-10-16-16 8"/>
+  </g>
+  <!-- Person links -->
+  <g transform="translate(90 150)">
+    <circle r="46" fill="#0f6e5c"/>
+    <circle cy="-12" r="14" fill="#e1efeb"/>
+    <path d="M-24 26c4-16 14-22 24-22s20 6 24 22" fill="#e1efeb"/>
+  </g>
+  <!-- Person rechts -->
+  <g transform="translate(390 150)">
+    <circle r="46" fill="#2e8f78"/>
+    <circle cy="-12" r="14" fill="#e1efeb"/>
+    <path d="M-24 26c4-16 14-22 24-22s20 6 24 22" fill="#e1efeb"/>
+  </g>
+  <!-- Skills in der Mitte -->
+  <g font-family="monospace" font-weight="bold" text-anchor="middle">
+    <rect class="ping" x="205" y="128" width="70" height="44" rx="8" fill="#e1efeb"/>
+    <text x="240" y="157" font-size="18" fill="#0a5245">&lt;/&gt;</text>
+  </g>
+  <g class="ping b">
+    <rect x="62" y="216" width="56" height="22" rx="11" fill="#e8a33d"/>
+    <rect x="362" y="216" width="56" height="22" rx="11" fill="#e8a33d"/>
+  </g>
+  <g font-family="monospace" font-size="12" text-anchor="middle" fill="#1c1f24">
+    <text x="90" y="231">Vue</text>
+    <text x="390" y="231">API</text>
+  </g>
+</svg>

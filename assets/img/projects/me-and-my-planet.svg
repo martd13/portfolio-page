@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <style>
+    .orbit { transform-origin: 240px 150px; animation: orbit 14s linear infinite; }
+    .float { animation: float 4s ease-in-out infinite; }
+    @keyframes orbit { to { transform: rotate(360deg); } }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    @media (prefers-reduced-motion: reduce) { .orbit, .float { animation: none; } }
+  </style>
+  <rect width="480" height="300" fill="#f6f5f1"/>
+  <g fill="#e8a33d" opacity=".6">
+    <circle cx="60" cy="50" r="3"/><circle cx="420" cy="70" r="4"/><circle cx="400" cy="250" r="3"/><circle cx="80" cy="240" r="4"/>
+  </g>
+  <!-- Kreislauf-Pfeile -->
+  <g class="orbit" fill="none" stroke="#0f6e5c" stroke-width="5" stroke-linecap="round">
+    <path d="M150 110a100 100 0 0 1 110-58"/>
+    <path d="M335 130a100 100 0 0 1-40 100"/>
+    <path d="M200 240a100 100 0 0 1-60-70"/>
+    <path d="M250 42l12 10-12 12M300 222l-6 14 14 4M134 180l4-14 14 2"/>
+  </g>
+  <!-- Erde -->
+  <g class="float">
+    <circle cx="240" cy="150" r="64" fill="#2e8f78" stroke="#1c1f24" stroke-width="4"/>
+    <path d="M196 120c14-6 22 4 34 0s14-16 26-12c10 4 4 18 16 22 8 3 16-2 20 6M184 160c12 4 18-6 30 0s8 22 22 24c10 1 16-8 26-4" fill="none" stroke="#e1efeb" stroke-width="6" stroke-linecap="round"/>
+    <!-- Blatt -->
+    <path d="M264 92c22-24 54-22 62-18-4 30-30 46-58 36z" fill="#0f6e5c" stroke="#1c1f24" stroke-width="3"/>
+    <path d="M268 108c14-12 30-20 50-30" stroke="#e1efeb" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

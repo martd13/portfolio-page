@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 440">
+  <style>
+    .gear-a { transform-origin: 400px 110px; animation: rot 9s linear infinite; }
+    .gear-b { transform-origin: 452px 168px; animation: rot 6s linear infinite reverse; }
+    .float { animation: float 5s ease-in-out infinite; }
+    .float-b { animation: float 6s ease-in-out infinite; animation-delay: -2s; }
+    .flow { stroke-dasharray: 6 10; animation: flow 1.6s linear infinite; }
+    .pulse { transform-origin: 140px 130px; animation: pulse 3s ease-in-out infinite; }
+    .type { animation: type 4s steps(1) infinite; }
+    @keyframes rot { to { transform: rotate(360deg); } }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    @keyframes flow { to { stroke-dashoffset: -32; } }
+    @keyframes pulse { 0%,100% { transform: scale(1); opacity: .2; } 50% { transform: scale(1.25); opacity: .45; } }
+    @keyframes type { 0%,20% { opacity: 0; } 25%,100% { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { .gear-a, .gear-b, .float, .float-b, .flow, .pulse, .type { animation: none; } }
+  </style>
+  <circle cx="270" cy="230" r="190" fill="#e1efeb"/>
+  <!-- Flow-Linien -->
+  <g fill="none" stroke="#0f6e5c" stroke-width="3">
+    <path class="flow" d="M170 140c40 0 50 60 90 80"/>
+    <path class="flow" d="M380 140c-30 10-40 50-90 80"/>
+  </g>
+  <!-- Laptop -->
+  <g transform="translate(140 200)">
+    <rect width="260" height="160" rx="12" fill="#1c1f24"/>
+    <rect x="12" y="12" width="236" height="136" rx="6" fill="#f6f5f1"/>
+    <path d="M-30 160h320l-20 28H-10z" fill="#5a606b"/>
+    <g font-family="monospace" font-size="14">
+      <text x="28" y="42" fill="#0f6e5c">trigger:</text>
+      <text x="104" y="42" fill="#1c1f24">neue Mail</text>
+      <text x="28" y="68" fill="#0f6e5c">→</text>
+      <text x="48" y="68" fill="#1c1f24">Frist prüfen</text>
+      <text x="28" y="94" fill="#0f6e5c">→</text>
+      <text x="48" y="94" fill="#1c1f24">Report senden</text>
+      <text class="type" x="28" y="122" fill="#0f6e5c">✓ erledigt</text>
+    </g>
+  </g>
+  <!-- Schild -->
+  <circle class="pulse" cx="140" cy="130" r="54" fill="#0f6e5c"/>
+  <g class="float">
+    <path d="M140 84l42 16v30c0 30-19 48-42 56-23-8-42-26-42-56v-30z" fill="#0f6e5c" stroke="#1c1f24" stroke-width="4" stroke-linejoin="round"/>
+    <rect x="124" y="122" width="32" height="26" rx="4" fill="#fff"/>
+    <path d="M130 122v-8a10 10 0 0 1 20 0v8" fill="none" stroke="#fff" stroke-width="5"/>
+    <circle cx="140" cy="134" r="4" fill="#0f6e5c"/>
+  </g>
+  <!-- Zahnräder -->
+  <g class="float-b">
+    <g class="gear-a" fill="#e8a33d">
+      <circle cx="400" cy="110" r="30"/>
+      <g stroke="#e8a33d" stroke-width="12"><path d="M400 66v88M356 110h88M369 79l62 62M431 79l-62 62"/></g>
+      <circle cx="400" cy="110" r="12" fill="#f6f5f1"/>
+    </g>
+    <g class="gear-b" fill="#0a5245">
+      <circle cx="452" cy="168" r="18"/>
+      <g stroke="#0a5245" stroke-width="8"><path d="M452 142v52M426 168h52M434 150l36 36M470 150l-36 36"/></g>
+      <circle cx="452" cy="168" r="7" fill="#f6f5f1"/>
+    </g>
+  </g>
+</svg>
