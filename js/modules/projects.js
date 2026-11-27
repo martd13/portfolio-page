@@ -3,6 +3,8 @@
  * Zeigt dabei einen Loading-, Fehler- und Leer-Zustand an.
  */
 
+import { observeReveal } from './reveal.js';
+
 const DATA_URL = 'data/projects.json';
 
 /** Holt die Projektdaten. Wirft einen Fehler, wenn die Antwort nicht ok ist. */
@@ -34,10 +36,27 @@ function createList(items, listClass, itemClass, label, unstyled = true) {
     return list;
 }
 
+/** Baut das Projektbild. Lazy Loading, weil die Cards weiter unten auf der Seite sind. */
+function createProjectImage(project) {
+    const figure = createElement('figure', 'project-card__media');
+    const image = document.createElement('img');
+    image.className = 'project-card__image';
+    image.src = project.image;
+    image.alt = project.imageAlt || '';
+    image.width = 480;
+    image.height = 300;
+    image.loading = 'lazy';
+    image.decoding = 'async';
+    figure.append(image);
+    return figure;
+}
+
 /** Baut eine einzelne Projekt-Card. */
-function createProjectCard(project) {
+function createProjectCard(project, index) {
     const item = createElement('li', 'project-grid__item');
     if (project.featured) item.classList.add('project-grid__item--featured');
+    // Leicht versetztes Einblenden: jede Card in einer Reihe startet etwas später
+    item.classList.add('reveal', `reveal--delay-${index % 3}`);
 
     const card = createElement('article', 'project-card');
     if (project.featured) card.classList.add('project-card--featured');
@@ -48,7 +67,11 @@ function createProjectCard(project) {
     const deliverables = createList(project.deliverables, 'project-card__list', 'project-card__list-item', 'Ergebnisse', false);
     const tags = createList(project.tags, 'project-card__tags', 'tag', 'Technologien und Themen');
 
-    card.append(meta, title, summary, deliverables, tags);
+    const body = createElement('div', 'project-card__body');
+    body.append(meta, title, summary, deliverables, tags);
+
+    if (project.image) card.append(createProjectImage(project));
+    card.append(body);
     item.append(card);
     return item;
 }
@@ -71,9 +94,10 @@ function renderProjects(container, data) {
 
     const grid = createElement('ul', 'project-grid');
     grid.setAttribute('role', 'list');
-    projects.forEach((project) => grid.append(createProjectCard(project)));
+    projects.forEach((project, index) => grid.append(createProjectCard(project, index)));
 
     container.replaceChildren(grid);
+    grid.querySelectorAll('.reveal').forEach(observeReveal);
 
     if (data.work && data.work.text) {
         container.append(createElement('p', 'project-work', data.work.text));

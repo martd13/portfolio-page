@@ -64,6 +64,19 @@
     gap: var(--space-lg);
 }
 
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.hero__visual {
+    margin: 0;
+    max-width: 26rem;
+    width: 100%;
+    margin-inline: auto;
+}
+
 /* ---------- Sections ---------- */
 .section {
     padding-block: var(--space-2xl);
@@ -130,7 +143,11 @@
 
 /* ---------- Desktop ---------- */
 @media (min-width: 1024px) {
+    /* Text links, Illustration rechts */
     .hero__inner {
+        display: grid;
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+        align-items: center;
         gap: var(--space-xl);
     }
 }
@@ -259,5 +276,12 @@
 
     .project-grid__item--featured {
         grid-column: span 2;
+    }
+}
+
+/* Breite Highlight-Cards: flacheres Bild, sonst wird es auf Desktop zu hoch */
+@media (min-width: 1024px) {
+    .project-grid__item--featured .project-card__media {
+        aspect-ratio: 16 / 7;
     }
 }

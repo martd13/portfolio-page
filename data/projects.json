@@ -6,6 +6,8 @@
       "module": "Requirements Engineering",
       "type": "Gruppenprojekt",
       "featured": true,
+      "image": "assets/img/projects/plantbuddy.svg",
+      "imageAlt": "Illustration: Pflanze im Topf, Giesskanne und Kalender mit erledigten Giess-Terminen",
       "summary": "App-Konzept, das die Pflanzenbewässerung in gemeinsam genutzten Räumen organisiert: wer giesst wann welche Pflanze.",
       "deliverables": [
         "Requirements-Liste mit funktionalen und nicht funktionalen Anforderungen",
@@ -15,7 +17,13 @@
         "Klickbarer Figma-Prototyp",
         "10-minütiger Produkt-Pitch vor einem Board"
       ],
-      "tags": ["Requirements Engineering", "UML", "Figma", "Business Model", "Pitching"]
+      "tags": [
+        "Requirements Engineering",
+        "UML",
+        "Figma",
+        "Business Model",
+        "Pitching"
+      ]
     },
     {
       "id": "skillswap",
@@ -23,6 +31,8 @@
       "module": "WSEG – Software Engineering",
       "type": "Gruppenprojekt",
       "featured": true,
+      "image": "assets/img/projects/skillswap.svg",
+      "imageAlt": "Illustration: Zwei Personen tauschen Skills über eine API aus",
       "summary": "Plattform zum Tauschen von Fähigkeiten. Ich habe Frontend und Backend entwickelt.",
       "deliverables": [
         "REST-API mit Strapi: Skills, Kategorien, Skill-Anfragen, Verknüpfung von Usern und Skills",
@@ -31,7 +41,15 @@
         "API-Tests mit Bruno",
         "Live-Demo und Abschlusspräsentation"
       ],
-      "tags": ["Vue 3", "Strapi", "TypeScript", "Node.js", "SQLite", "REST", "Fullstack"]
+      "tags": [
+        "Vue 3",
+        "Strapi",
+        "TypeScript",
+        "Node.js",
+        "SQLite",
+        "REST",
+        "Fullstack"
+      ]
     },
     {
       "id": "wpro",
@@ -39,13 +57,18 @@
       "module": "WPRO",
       "type": "Semesterarbeit",
       "featured": false,
+      "image": "assets/img/projects/wpro.svg",
+      "imageAlt": "Illustration: Support-Ticket durchläuft Anfrage, Bearbeitung und Lösung",
       "summary": "Semesterarbeit zum IT-Support-Prozess eines Schweizer Unternehmens.",
       "deliverables": [
         "Schriftliche Semesterarbeit",
         "Abschlusspräsentation",
         "Persönliche Reflexion"
       ],
-      "tags": ["Prozessmanagement", "IT Service Management"]
+      "tags": [
+        "Prozessmanagement",
+        "IT Service Management"
+      ]
     },
     {
       "id": "egit-uber",
@@ -53,13 +76,20 @@
       "module": "EGIT – Enterprise Governance of IT",
       "type": "Gruppenarbeit mit eigenem Kapitel",
       "featured": false,
+      "image": "assets/img/projects/egit-uber.svg",
+      "imageAlt": "Illustration: Schutzschild mit Haken, Organigramme, Waage und Checkliste",
       "summary": "IT-Governance am Beispiel Uber. Mein Kapitel: Governance, Risk Management & Compliance.",
       "deliverables": [
         "Analyse des Fallbeispiels Uber",
         "Einordnung mit dem COBIT-Framework",
         "Eigenes Kapitel zu Governance, Risk & Compliance"
       ],
-      "tags": ["IT Governance", "COBIT", "Risk Management", "Compliance"]
+      "tags": [
+        "IT Governance",
+        "COBIT",
+        "Risk Management",
+        "Compliance"
+      ]
     },
     {
       "id": "me-and-my-planet",
@@ -67,12 +97,18 @@
       "module": "Sustainable Business",
       "type": "Einzelarbeit",
       "featured": false,
+      "image": "assets/img/projects/me-and-my-planet.svg",
+      "imageAlt": "Illustration: Erde mit Blatt, umgeben von Kreislauf-Pfeilen",
       "summary": "Reflexionstagebuch über das eigene Verhalten und seine Wirkung auf Umwelt und Gesellschaft.",
       "deliverables": [
         "Persönliches Reflexionstagebuch",
         "Auseinandersetzung mit Circular Economy, Externalitäten und Pigou-Steuern"
       ],
-      "tags": ["Nachhaltigkeit", "Circular Economy", "Reflexion"]
+      "tags": [
+        "Nachhaltigkeit",
+        "Circular Economy",
+        "Reflexion"
+      ]
     },
     {
       "id": "portfolio-page",
@@ -80,12 +116,19 @@
       "module": "EWEB – Web Engineering",
       "type": "Einzelprojekt",
       "featured": false,
+      "image": "assets/img/projects/portfolio-page.svg",
+      "imageAlt": "Illustration: Browserfenster mit Projekt-Cards und Code-Symbol",
       "summary": "Mein Portfolio, gebaut mit HTML, CSS und JavaScript ohne Framework und gehostet auf GitHub Pages.",
       "deliverables": [
         "Responsives Layout mit CSS Grid und Media Queries",
         "Dynamische Inhalte per JavaScript"
       ],
-      "tags": ["HTML", "CSS", "JavaScript", "GitHub Pages"]
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "GitHub Pages"
+      ]
     }
   ],
   "work": {

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
+  <style>
+    .javelin { offset-path: path("M60 250 Q 240 20 430 230"); offset-rotate: auto; animation: throw 3.6s cubic-bezier(.3,.1,.5,1) infinite; }
+    .trail { stroke-dasharray: 8 10; animation: dash 1.2s linear infinite; }
+    @keyframes throw { 0% { offset-distance: 0%; opacity: 0; } 8% { opacity: 1; } 80% { offset-distance: 100%; opacity: 1; } 100% { offset-distance: 100%; opacity: 0; } }
+    @keyframes dash { to { stroke-dashoffset: -36; } }
+    @media (prefers-reduced-motion: reduce) { .javelin { animation: none; offset-distance: 55%; } .trail { animation: none; } }
+  </style>
+  <rect width="480" height="360" rx="12" fill="#e1efeb"/>
+  <circle cx="390" cy="70" r="34" fill="#e8a33d" opacity=".8"/>
+  <!-- Rasen + Bahn -->
+  <path d="M0 260h480v100H0z" fill="#2e8f78"/>
+  <path d="M0 290h480v70H0z" fill="#b6553a"/>
+  <g stroke="#f6f5f1" stroke-width="3"><path d="M0 312h480M0 336h480"/></g>
+  <!-- Weitenlinien -->
+  <g stroke="#f6f5f1" stroke-width="2" opacity=".7"><path d="M300 260l-10 30M360 260l-6 30M420 260l-2 30"/></g>
+  <g font-family="monospace" font-size="12" fill="#f6f5f1"><text x="292" y="254">40</text><text x="352" y="254">50</text><text x="412" y="254">60</text></g>
+  <!-- Flugbahn -->
+  <path class="trail" d="M60 250 Q 240 20 430 230" fill="none" stroke="#0f6e5c" stroke-width="3"/>
+  <!-- Speer -->
+  <g class="javelin">
+    <path d="M-46 0h80" stroke="#1c1f24" stroke-width="5" stroke-linecap="round"/>
+    <path d="M34 0l14 0" stroke="#5a606b" stroke-width="3" stroke-linecap="round"/>
+    <rect x="-8" y="-4" width="16" height="8" rx="2" fill="#e8a33d"/>
+  </g>
+  <text x="24" y="40" font-family="monospace" font-size="14" fill="#0a5245">LV Thun · Speerwurf</text>
+</svg>

@@ -1,0 +1,174 @@
+/* ==========================================================================
+   animations.css – Einstiegs-Animationen, Scroll-Reveal, Hover-Effekte
+   Alle Animationen respektieren prefers-reduced-motion (siehe unten und base.css).
+   ========================================================================== */
+
+/* ---------- Keyframes ---------- */
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pop-in {
+    from {
+        opacity: 0;
+        transform: scale(0.92) rotate(-2deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+@keyframes wave {
+    0%, 60%, 100% { transform: rotate(0); }
+    10%, 30% { transform: rotate(14deg); }
+    20%, 40% { transform: rotate(-8deg); }
+}
+
+@keyframes underline-grow {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+/* ---------- Hero: gestaffelter Einstieg beim Laden ---------- */
+.hero__content > * {
+    animation: fade-up 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero__content > :nth-child(1) { animation-delay: 0ms; }
+.hero__content > :nth-child(2) { animation-delay: 120ms; }
+.hero__content > :nth-child(3) { animation-delay: 240ms; }
+.hero__content > :nth-child(4) { animation-delay: 360ms; }
+.hero__content > :nth-child(5) { animation-delay: 480ms; }
+
+.hero__visual {
+    animation: pop-in 900ms cubic-bezier(0.22, 1, 0.36, 1) 300ms both;
+}
+
+/* Winkende Hand nach «Hallo» */
+.hero__wave {
+    display: inline-block;
+    transform-origin: 70% 70%;
+    animation: wave 2.4s ease-in-out 1s 2;
+}
+
+/* Akzent-Unterstrich unter dem Untertitel */
+.hero__title-accent {
+    position: relative;
+    width: fit-content;
+}
+
+.hero__title-accent::after {
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: var(--space-2xs);
+    border-radius: 2px;
+    background-color: var(--color-focus);
+    transform-origin: left;
+    animation: underline-grow 800ms cubic-bezier(0.22, 1, 0.36, 1) 700ms both;
+}
+
+/* ---------- Scroll-Reveal (Klassen werden per JS gesetzt) ---------- */
+/* Nur verstecken, wenn JS läuft – ohne JS bleibt alles sichtbar */
+.has-reveal .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 700ms ease, transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.has-reveal .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.has-reveal .reveal--delay-1 { transition-delay: 120ms; }
+.has-reveal .reveal--delay-2 { transition-delay: 240ms; }
+
+/* Listen leicht versetzt einblenden */
+.has-reveal .result-list__item:nth-child(2),
+.has-reveal .skill-grid > li:nth-child(2) { transition-delay: 100ms; }
+.has-reveal .result-list__item:nth-child(3),
+.has-reveal .skill-grid > li:nth-child(3) { transition-delay: 200ms; }
+.has-reveal .result-list__item:nth-child(4),
+.has-reveal .skill-grid > li:nth-child(4) { transition-delay: 300ms; }
+
+/* ---------- Hover-Effekte ---------- */
+.button {
+    transition: background-color var(--transition-fast), color var(--transition-fast),
+        border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lift);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+.tag {
+    transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+}
+
+.tag:hover {
+    background-color: var(--color-accent);
+    color: var(--color-surface);
+    transform: translateY(-2px);
+}
+
+.skill-group,
+.result-list__item,
+.fact-card {
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.skill-group:hover,
+.result-list__item:hover,
+.fact-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-lift);
+}
+
+.site-header__logo {
+    transition: transform var(--transition-base), background-color var(--transition-base);
+}
+
+.site-header__brand:hover .site-header__logo {
+    transform: rotate(-8deg) scale(1.08);
+    background-color: var(--color-accent);
+}
+
+/* ---------- Reduzierte Bewegung: alles sofort sichtbar, nichts bewegt sich ---------- */
+@media (prefers-reduced-motion: reduce) {
+    .hero__content > *,
+    .hero__visual,
+    .hero__wave,
+    .hero__title-accent::after {
+        animation: none;
+    }
+
+    .has-reveal .reveal {
+        opacity: 1;
+        transform: none;
+    }
+
+    .project-card:hover,
+    .project-card:hover .project-card__image,
+    .button:hover,
+    .tag:hover,
+    .skill-group:hover,
+    .result-list__item:hover,
+    .fact-card:hover {
+        transform: none;
+    }
+}
