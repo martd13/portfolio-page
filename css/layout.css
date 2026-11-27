@@ -226,3 +226,38 @@
 .contact-card {
     max-width: 28rem;
 }
+
+/* ---------- Projekte-Grid (mobile-first) ---------- */
+.section__intro {
+    margin-bottom: var(--space-lg);
+    color: var(--color-text-muted);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-md);
+}
+
+.project-grid__item {
+    display: flex; /* Cards in einer Zeile gleich hoch */
+}
+
+@media (min-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-lg);
+    }
+}
+
+/* Ab 1024px: 3 Spalten, Highlight-Projekte belegen 2 davon */
+@media (min-width: 1024px) {
+    .project-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-auto-flow: dense; /* füllt Lücken neben breiten Cards auf */
+    }
+
+    .project-grid__item--featured {
+        grid-column: span 2;
+    }
+}
