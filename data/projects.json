@@ -1,0 +1,94 @@
+{
+  "projects": [
+    {
+      "id": "plantbuddy",
+      "title": "PlantBuddy",
+      "module": "Requirements Engineering",
+      "type": "Gruppenprojekt",
+      "featured": true,
+      "summary": "App-Konzept, das die Pflanzenbewässerung in gemeinsam genutzten Räumen organisiert: wer giesst wann welche Pflanze.",
+      "deliverables": [
+        "Requirements-Liste mit funktionalen und nicht funktionalen Anforderungen",
+        "UML: Use-Case-, Klassen-, Sequenz-, Aktivitäts- und Zustandsdiagramm",
+        "Service Blueprint, E3-Value-Modell, Value Proposition Canvas",
+        "PRFAQ",
+        "Klickbarer Figma-Prototyp",
+        "10-minütiger Produkt-Pitch vor einem Board"
+      ],
+      "tags": ["Requirements Engineering", "UML", "Figma", "Business Model", "Pitching"]
+    },
+    {
+      "id": "skillswap",
+      "title": "SkillSwap",
+      "module": "WSEG – Software Engineering",
+      "type": "Gruppenprojekt",
+      "featured": true,
+      "summary": "Plattform zum Tauschen von Fähigkeiten. Ich habe Frontend und Backend entwickelt.",
+      "deliverables": [
+        "REST-API mit Strapi: Skills, Kategorien, Skill-Anfragen, Verknüpfung von Usern und Skills",
+        "Endpunkte /api/skills und /api/requests",
+        "Vue-3-Frontend inkl. Login/Registrierung und Startseite",
+        "API-Tests mit Bruno",
+        "Live-Demo und Abschlusspräsentation"
+      ],
+      "tags": ["Vue 3", "Strapi", "TypeScript", "Node.js", "SQLite", "REST", "Fullstack"]
+    },
+    {
+      "id": "wpro",
+      "title": "IT-Support-Prozess",
+      "module": "WPRO",
+      "type": "Semesterarbeit",
+      "featured": false,
+      "summary": "Semesterarbeit zum IT-Support-Prozess eines Schweizer Unternehmens.",
+      "deliverables": [
+        "Schriftliche Semesterarbeit",
+        "Abschlusspräsentation",
+        "Persönliche Reflexion"
+      ],
+      "tags": ["Prozessmanagement", "IT Service Management"]
+    },
+    {
+      "id": "egit-uber",
+      "title": "Fallstudie Uber",
+      "module": "EGIT – Enterprise Governance of IT",
+      "type": "Gruppenarbeit mit eigenem Kapitel",
+      "featured": false,
+      "summary": "IT-Governance am Beispiel Uber. Mein Kapitel: Governance, Risk Management & Compliance.",
+      "deliverables": [
+        "Analyse des Fallbeispiels Uber",
+        "Einordnung mit dem COBIT-Framework",
+        "Eigenes Kapitel zu Governance, Risk & Compliance"
+      ],
+      "tags": ["IT Governance", "COBIT", "Risk Management", "Compliance"]
+    },
+    {
+      "id": "me-and-my-planet",
+      "title": "Me and My Planet",
+      "module": "Sustainable Business",
+      "type": "Einzelarbeit",
+      "featured": false,
+      "summary": "Reflexionstagebuch über das eigene Verhalten und seine Wirkung auf Umwelt und Gesellschaft.",
+      "deliverables": [
+        "Persönliches Reflexionstagebuch",
+        "Auseinandersetzung mit Circular Economy, Externalitäten und Pigou-Steuern"
+      ],
+      "tags": ["Nachhaltigkeit", "Circular Economy", "Reflexion"]
+    },
+    {
+      "id": "portfolio-page",
+      "title": "Diese Seite",
+      "module": "EWEB – Web Engineering",
+      "type": "Einzelprojekt",
+      "featured": false,
+      "summary": "Mein Portfolio, gebaut mit HTML, CSS und JavaScript ohne Framework und gehostet auf GitHub Pages.",
+      "deliverables": [
+        "Responsives Layout mit CSS Grid und Media Queries",
+        "Dynamische Inhalte per JavaScript"
+      ],
+      "tags": ["HTML", "CSS", "JavaScript", "GitHub Pages"]
+    }
+  ],
+  "work": {
+    "text": "Neben dem Studium arbeite ich 50 % als ICT Trainee und automatisiere Abläufe wie Fristenverwaltung und Reporting mit Power Automate und Copilot Studio."
+  }
+}

@@ -2,6 +2,31 @@
 
 Wöchentliche Updates der Portfolio-Seite. Neueste Einträge oben.
 
+## 2026-11-27 – Projekte dynamisch aus JSON (KW 45)
+
+**Was**
+- Neue Datei `data/projects.json` mit sechs Studienprojekten: PlantBuddy, SkillSwap (WSEG), IT-Support-Prozess (WPRO), Fallstudie Uber (EGIT), Me and My Planet, diese Seite
+- Neues Modul `js/modules/projects.js`: lädt die JSON-Datei per `fetch()` und baut daraus die Projekt-Cards
+- Loading-, Fehler- und Leer-Zustand sowie ein `<noscript>`-Hinweis
+- Highlight-Projekte (`featured`) sind ab 1024 px doppelt so breit
+- Berufliches nur als ein Satz unter den Projekten, ohne Projektdetails (Entscheid Dario)
+
+**Warum**
+Die Inhalte stecken in Daten statt im HTML. Ein neues Projekt braucht nur einen Eintrag in der JSON-Datei. Damit ist der erste dynamische Inhalt für Kriterium 3 umgesetzt.
+
+**Getestet**
+Playwright/Chromium bei 320, 360, 768, 1024, 1920 px: 6 Cards gerendert, keine horizontale Scrollleiste, ein `<h1>`, kein Inline-CSS, keine JS-Fehler.
+
+**Konzepte für die Prüfung**
+- **`fetch()` + `async/await`:** `response.ok` prüfen, weil `fetch` bei HTTP 404 keinen Fehler wirft
+- **`try/catch/finally`:** Fehler abfangen und dem Nutzer anzeigen, `aria-busy` im `finally` immer entfernen
+- **DOM-Rendering mit `createElement` + `textContent`:** sicherer als `innerHTML`, weil kein HTML aus Daten interpretiert wird (Schutz vor XSS)
+- **`grid-column: span 2` + `grid-auto-flow: dense`:** breite Cards, Lücken werden automatisch aufgefüllt
+- **`role="list"`:** nur bei Listen ohne Aufzählungszeichen, weil Safari sonst die Listen-Semantik entfernt
+
+**Offene TODOs für Dario**
+- Tag-Filter und Suche folgen in KW 46
+
 ## 2026-11-16 – Kontakt-Section mit LinkedIn
 
 **Was**
