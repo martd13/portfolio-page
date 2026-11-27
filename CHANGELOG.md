@@ -2,6 +2,32 @@
 
 Wöchentliche Updates der Portfolio-Seite. Neueste Einträge oben.
 
+## 2026-11-27 – Illustrationen und Animationen
+
+**Was**
+- Eigene SVG-Illustrationen in den Farben der Seite: Hero (Laptop mit Ablauf, Schild, Zahnräder), Leichtathletik (fliegender Speer) und je ein Bild pro Projekt
+- Die SVGs haben eigene, dezente Animationen (Tropfen, drehende Pfeile, Speerflug entlang einer Bahn)
+- Projekt-Cards mit Bild oben, Hover-Effekt (Card hebt sich, Bild zoomt leicht)
+- Hero: Text blendet gestaffelt ein, Illustration «poppt» herein, winkende Hand, wachsender Unterstrich
+- Neues Modul `js/modules/reveal.js`: Sections und Cards blenden beim Scrollen ein
+- Neue Datei `css/animations.css` für alle Animationen
+- Foto-Platzhalter bei den Hobbys durch die Speerwurf-Illustration ersetzt (ein echtes Foto kann ihn später ersetzen)
+
+**Warum**
+Die Seite soll lebendiger und persönlicher wirken (Kriterium 5: Gestaltung & Funktionalität). Eigene Illustrationen sind rechtlich sauber und passen zum Design.
+
+**Getestet**
+Playwright/Chromium bei 320, 360, 768, 1024, 1440, 1920 px: keine horizontale Scrollleiste, alle Bilder geladen, alle Reveal-Elemente werden sichtbar, kein Inline-CSS, keine JS-Fehler. Mit `prefers-reduced-motion: reduce` ist alles sofort sichtbar und unbewegt.
+
+**Konzepte für die Prüfung**
+- **IntersectionObserver:** Der Browser meldet, wenn ein Element ins Bild kommt. Sparsamer als ein `scroll`-Event, das bei jedem Pixel feuert
+- **`@keyframes` + `animation-delay`:** gestaffelte Einstiegs-Animation ohne JavaScript
+- **`transition` vs. `animation`:** Transition reagiert auf eine Zustandsänderung (Hover, Klasse), Animation läuft selbständig
+- **`prefers-reduced-motion`:** Barrierefreiheit für Menschen, denen Bewegung Probleme macht
+- **Progressive Enhancement:** Elemente werden nur versteckt, wenn JS läuft (`.has-reveal`), ohne JS bleibt alles sichtbar
+- **`offset-path`:** Der Speer fliegt im SVG entlang einer Bézier-Kurve
+- **`loading="lazy"` + `width`/`height`:** Bilder laden erst bei Bedarf, und das Layout springt nicht
+
 ## 2026-11-27 – Projekte dynamisch aus JSON (KW 45)
 
 **Was**
